@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh4hkxe4vqdqv"]
+
+[ext_resource type="Script" uid="uid://ctndthuuixc2s" path="res://general_squeek.gd" id="1_btjmm"]
+[ext_resource type="Texture2D" uid="uid://bpka0g8gl11hm" path="res://GeneralSqueek2.0/GeneralSquee2.0Idle1.png" id="1_egh5k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_btjmm"]
+radius = 78.77182
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_btjmm")
+
+[node name="GeneralSquee2_0Idle1" type="Sprite2D" parent="."]
+position = Vector2(-11, -124)
+texture = ExtResource("1_egh5k")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_btjmm")

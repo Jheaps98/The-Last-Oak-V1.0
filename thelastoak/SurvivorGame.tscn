@@ -1,0 +1,341 @@
+[gd_scene format=3 uid="uid://byay0f44vcnd4"]
+
+[ext_resource type="Texture2D" uid="uid://1ujgqof6nc04" path="res://MapBackgroundUpdated.png" id="1_dteqw"]
+[ext_resource type="Script" uid="uid://ce34vfmgwgb0v" path="res://survivor_game.gd" id="1_fikl7"]
+[ext_resource type="PackedScene" uid="uid://bl8w1x43rh1ve" path="res://GeneralSqueekMain.tscn" id="1_fmc1w"]
+[ext_resource type="PackedScene" uid="uid://ck5c6qxpey56t" path="res://DeadTree.tscn" id="2_dteqw"]
+[ext_resource type="PackedScene" uid="uid://cklk53v33oq3h" path="res://FiendishFox.tscn" id="3_dteqw"]
+[ext_resource type="PackedScene" uid="uid://bxd4ntqq40x8" path="res://DeadGrass.tscn" id="5_gj2y7"]
+[ext_resource type="PackedScene" uid="uid://tad74nmnnq43" path="res://TreeOfLife.tscn" id="7_g0eo2"]
+[ext_resource type="Texture2D" uid="uid://dbi2u4uxvii4e" path="res://Powerup/PowerupBeans.png" id="8_qxaja"]
+[ext_resource type="Texture2D" uid="uid://cjddst6vhor2g" path="res://Powerup/PowerupEnergy.png" id="9_5wdqv"]
+[ext_resource type="Script" uid="uid://dh8euimisbgu6" path="res://pause_menu.gd" id="10_5wdqv"]
+
+[sub_resource type="Curve2D" id="Curve2D_g0eo2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -375, -333, 0, 0, 0, 0, 4517, -315, 0, 0, 0, 0, 4517, 4374, 0, 0, 0, 0, -345, 4380, 0, 0, 0, 0, -363, -321)
+}
+point_count = 5
+
+[node name="Game" type="Node2D" unique_id=1424489321]
+z_index = 10
+script = ExtResource("1_fikl7")
+
+[node name="World" type="Node2D" parent="." unique_id=1627395814]
+y_sort_enabled = true
+
+[node name="Map" type="Sprite2D" parent="World" unique_id=15458230]
+z_index = -10
+position = Vector2(2048, 2048)
+scale = Vector2(4, 4)
+texture = ExtResource("1_dteqw")
+
+[node name="GeneralSqueek" parent="World" unique_id=1300187776 instance=ExtResource("1_fmc1w")]
+position = Vector2(2066, 2091)
+
+[node name="Mob" parent="World" unique_id=1284657773 instance=ExtResource("3_dteqw")]
+position = Vector2(111, -25)
+
+[node name="StaticBody2D" parent="World" unique_id=1903561616 instance=ExtResource("2_dteqw")]
+position = Vector2(2960, 926)
+
+[node name="StaticBody2D2" parent="World" unique_id=1870794189 instance=ExtResource("2_dteqw")]
+position = Vector2(3015, 751)
+
+[node name="StaticBody2D3" parent="World" unique_id=1824403516 instance=ExtResource("2_dteqw")]
+position = Vector2(3319, 909)
+
+[node name="StaticBody2D4" parent="World" unique_id=339922862 instance=ExtResource("2_dteqw")]
+position = Vector2(3361, 738)
+
+[node name="StaticBody2D5" parent="World" unique_id=1886582973 instance=ExtResource("2_dteqw")]
+position = Vector2(634, 688)
+
+[node name="StaticBody2D6" parent="World" unique_id=821578930 instance=ExtResource("2_dteqw")]
+position = Vector2(1210, 763)
+
+[node name="StaticBody2D7" parent="World" unique_id=2012692054 instance=ExtResource("2_dteqw")]
+position = Vector2(663, 872)
+
+[node name="StaticBody2D8" parent="World" unique_id=437258103 instance=ExtResource("2_dteqw")]
+position = Vector2(938, 771)
+
+[node name="StaticBody2D9" parent="World" unique_id=360198958 instance=ExtResource("2_dteqw")]
+position = Vector2(700, 2856)
+
+[node name="StaticBody2D10" parent="World" unique_id=1816066570 instance=ExtResource("2_dteqw")]
+position = Vector2(1064, 2994)
+
+[node name="StaticBody2D11" parent="World" unique_id=1192236304 instance=ExtResource("2_dteqw")]
+position = Vector2(1193, 3294)
+
+[node name="StaticBody2D12" parent="World" unique_id=1536285897 instance=ExtResource("2_dteqw")]
+position = Vector2(788, 3332)
+
+[node name="StaticBody2D13" parent="World" unique_id=1220394558 instance=ExtResource("2_dteqw")]
+position = Vector2(563, 3127)
+
+[node name="StaticBody2D14" parent="World" unique_id=1455118295 instance=ExtResource("2_dteqw")]
+position = Vector2(3109, 3374)
+
+[node name="StaticBody2D15" parent="World" unique_id=898868934 instance=ExtResource("2_dteqw")]
+position = Vector2(3209, 3148)
+
+[node name="StaticBody2D16" parent="World" unique_id=1541207332 instance=ExtResource("2_dteqw")]
+position = Vector2(3627, 3219)
+
+[node name="StaticBody2D17" parent="World" unique_id=1052186051 instance=ExtResource("2_dteqw")]
+position = Vector2(3380, 3395)
+
+[node name="StaticBody2D18" parent="World" unique_id=1750815953 instance=ExtResource("2_dteqw")]
+position = Vector2(1420, 1739)
+
+[node name="Sprite2D" parent="World" unique_id=2090356531 instance=ExtResource("5_gj2y7")]
+position = Vector2(2419, 2475.0002)
+
+[node name="Sprite2D2" parent="World" unique_id=1582993977 instance=ExtResource("5_gj2y7")]
+position = Vector2(2349, 1513)
+
+[node name="Sprite2D3" parent="World" unique_id=2030125149 instance=ExtResource("5_gj2y7")]
+position = Vector2(2228, 1179.0001)
+
+[node name="Sprite2D4" parent="World" unique_id=1120896926 instance=ExtResource("5_gj2y7")]
+position = Vector2(1583.0001, 1249.0001)
+
+[node name="Sprite2D5" parent="World" unique_id=1262630413 instance=ExtResource("5_gj2y7")]
+position = Vector2(1412, 1747.0001)
+
+[node name="Sprite2D6" parent="World" unique_id=1071942840 instance=ExtResource("5_gj2y7")]
+position = Vector2(1391, 2063.0002)
+
+[node name="Sprite2D7" parent="World" unique_id=360342094 instance=ExtResource("5_gj2y7")]
+position = Vector2(1745.0001, 2489.0002)
+
+[node name="Sprite2D8" parent="World" unique_id=1836359311 instance=ExtResource("5_gj2y7")]
+position = Vector2(2691.0002, 2166.0002)
+
+[node name="Sprite2D9" parent="World" unique_id=219454302 instance=ExtResource("5_gj2y7")]
+position = Vector2(3214.0002, 2271.0002)
+
+[node name="Sprite2D10" parent="World" unique_id=744047938 instance=ExtResource("5_gj2y7")]
+position = Vector2(2898.0002, 1697)
+
+[node name="Sprite2D11" parent="World" unique_id=1619232176 instance=ExtResource("5_gj2y7")]
+position = Vector2(3347.0002, 1833.0001)
+
+[node name="Sprite2D12" parent="World" unique_id=1717043345 instance=ExtResource("5_gj2y7")]
+position = Vector2(2083, 3005.0002)
+
+[node name="Sprite2D13" parent="World" unique_id=1790364606 instance=ExtResource("5_gj2y7")]
+position = Vector2(943, 2076)
+
+[node name="StaticBody2D19" parent="World" unique_id=1127678163 instance=ExtResource("2_dteqw")]
+position = Vector2(941, 2061)
+
+[node name="StaticBody2D20" parent="World" unique_id=259579528 instance=ExtResource("2_dteqw")]
+position = Vector2(1395, 2041)
+
+[node name="StaticBody2D21" parent="World" unique_id=1048629902 instance=ExtResource("2_dteqw")]
+position = Vector2(1744, 2476)
+
+[node name="StaticBody2D22" parent="World" unique_id=241939945 instance=ExtResource("2_dteqw")]
+position = Vector2(1582, 1230)
+
+[node name="StaticBody2D23" parent="World" unique_id=1806612069 instance=ExtResource("2_dteqw")]
+position = Vector2(2231, 1158)
+
+[node name="StaticBody2D24" parent="World" unique_id=1162296125 instance=ExtResource("2_dteqw")]
+position = Vector2(2350, 1494)
+
+[node name="StaticBody2D25" parent="World" unique_id=182783889 instance=ExtResource("2_dteqw")]
+position = Vector2(2897, 1677)
+
+[node name="StaticBody2D26" parent="World" unique_id=1620671151 instance=ExtResource("2_dteqw")]
+position = Vector2(2690, 2148)
+
+[node name="StaticBody2D27" parent="World" unique_id=494214028 instance=ExtResource("2_dteqw")]
+position = Vector2(3211, 2255)
+
+[node name="StaticBody2D28" parent="World" unique_id=30835698 instance=ExtResource("2_dteqw")]
+position = Vector2(3349, 1819)
+
+[node name="StaticBody2D29" parent="World" unique_id=2009055909 instance=ExtResource("2_dteqw")]
+position = Vector2(2426, 2465)
+
+[node name="StaticBody2D30" parent="World" unique_id=276176792 instance=ExtResource("2_dteqw")]
+position = Vector2(2083, 2982)
+
+[node name="TreeOfLife" parent="World" unique_id=92870462 instance=ExtResource("7_g0eo2")]
+position = Vector2(2053, 1777)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2103906837]
+position = Vector2(3.0517578e-05, 5.4404907)
+scale = Vector2(1, 1.0163378)
+curve = SubResource("Curve2D_g0eo2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1153320421]
+unique_name_in_owner = true
+position = Vector2(-375, -333)
+rotation = 0.0036794601
+
+[node name="Timer" type="Timer" parent="." unique_id=920915863]
+wait_time = 1.5
+autostart = true
+
+[node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=2078607040]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen" unique_id=1793883520]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5294118)
+
+[node name="GameOverLabel" type="Label" parent="GameOverScreen/ColorRect" unique_id=1379522808]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -136.5
+offset_right = 542.5
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 200
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOverScreen/ColorRect" unique_id=902477966]
+process_mode = 2
+layout_mode = 1
+anchors_preset = -1
+offset_left = 952.0
+offset_top = 1014.0
+offset_right = 1900.0
+offset_bottom = 1279.0
+theme_override_font_sizes/font_size = 150
+text = "Restart"
+
+[node name="ScoreLabel" type="Label" parent="GameOverScreen" unique_id=1960996831]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -277.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Score: 
+"
+horizontal_alignment = 2
+
+[node name="PowerupHUD" type="CanvasLayer" parent="." unique_id=1843875981]
+
+[node name="Control" type="Control" parent="PowerupHUD" unique_id=492058860]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PowerupHUD/Control" unique_id=1998001732]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 325.0
+offset_bottom = 311.0
+scale = Vector2(0.5, 0.5)
+
+[node name="SpeedBuffIcon" type="TextureRect" parent="PowerupHUD/Control/HBoxContainer" unique_id=1878712505]
+visible = false
+layout_mode = 2
+texture = ExtResource("8_qxaja")
+
+[node name="Label" type="Label" parent="PowerupHUD/Control/HBoxContainer/SpeedBuffIcon" unique_id=1764127801]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 516.0
+offset_right = 312.0
+offset_bottom = 604.0
+theme_override_font_sizes/font_size = 50
+
+[node name="FireRateBuffIcon" type="TextureRect" parent="PowerupHUD/Control/HBoxContainer" unique_id=705692174]
+visible = false
+layout_mode = 2
+texture = ExtResource("9_5wdqv")
+
+[node name="Label" type="Label" parent="PowerupHUD/Control/HBoxContainer/FireRateBuffIcon" unique_id=934508218]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 540.0
+offset_right = 307.0
+offset_bottom = 624.0
+theme_override_font_sizes/font_size = 50
+
+[node name="WaveHUD" type="CanvasLayer" parent="." unique_id=503008586]
+
+[node name="WaveLabel" type="Label" parent="WaveHUD" unique_id=1354244562]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 120
+text = "WAVE 1"
+horizontal_alignment = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1800809685]
+
+[node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=1434431078]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_5wdqv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseMenu" unique_id=1941953556]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 178.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu/VBoxContainer" unique_id=637446375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Resume Game
+"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/PauseMenu/VBoxContainer" unique_id=335297753]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="health_depleted" from="World/GeneralSqueek" to="." method="_on_general_squeek_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="GameOverScreen/ColorRect/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/VBoxContainer/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/VBoxContainer/QuitButton" to="CanvasLayer/PauseMenu" method="_on_quit_button_pressed"]

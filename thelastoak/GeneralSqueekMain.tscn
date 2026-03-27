@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://bl8w1x43rh1ve"]
+
+[ext_resource type="Script" uid="uid://cjogvpdw2u4f6" path="res://general_squeek_main.gd" id="1_hdn8p"]
+[ext_resource type="Texture2D" uid="uid://bpka0g8gl11hm" path="res://GeneralSqueek2.0/GeneralSquee2.0Idle1.png" id="1_max11"]
+[ext_resource type="Texture2D" uid="uid://5tr18hb3kutt" path="res://GeneralSqueek2.0/GeneralSquee2.0Idle2.png" id="2_hdn8p"]
+[ext_resource type="Texture2D" uid="uid://c4lp0awfhf8f3" path="res://GeneralSqueek2.0/GeneralSqueekRun1.png" id="3_xfqg8"]
+[ext_resource type="Texture2D" uid="uid://q0wxcml3cytx" path="res://GeneralSqueek2.0/GeneralSqueekaRun2.png" id="4_d4702"]
+[ext_resource type="Texture2D" uid="uid://dkcr2nf7rjd58" path="res://GeneralSqueek2.0/GeneralSqueekShoot1.png" id="4_hhyoi"]
+[ext_resource type="Texture2D" uid="uid://dx1xa4xl16bkk" path="res://GeneralSqueek2.0/GeneralSqueekRun3.png" id="5_db7if"]
+[ext_resource type="Texture2D" uid="uid://clcb3phqa7v7h" path="res://GeneralSqueek2.0/GeneralSqueekShoot2.png" id="5_fgwuk"]
+[ext_resource type="Texture2D" uid="uid://duvpqp355iqj1" path="res://GeneralSqueek2.0/GeneralSqueekShoot3.png" id="6_ct1l0"]
+[ext_resource type="Texture2D" uid="uid://6wja6yibfxfv" path="res://GeneralSqueek2.0/GeneralSqueekRun4.png" id="6_hhyoi"]
+[ext_resource type="Texture2D" uid="uid://boelvpuut0q10" path="res://GeneralSqueek2.0/GeneralSqueekShoot4.png" id="7_l2bue"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgwuk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_max11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hdn8p")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hhyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fgwuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ct1l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l2bue")
+}],
+"loop": false,
+"name": &"Shoot",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xfqg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d4702")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_db7if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hhyoi")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_max11"]
+radius = 19.026299
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hhyoi"]
+radius = 23.021729
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhyoi"]
+bg_color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgwuk"]
+bg_color = Color(0.34901962, 0.6117647, 0.27058825, 0.99607843)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1256343208]
+collision_mask = 6
+platform_floor_layers = 4294901760
+script = ExtResource("1_hdn8p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1029253928]
+position = Vector2(-1.9999998, -37.999996)
+scale = Vector2(0.2869955, 0.2869955)
+sprite_frames = SubResource("SpriteFrames_fgwuk")
+animation = &"Shoot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=265535090]
+position = Vector2(1, -14)
+shape = SubResource("CircleShape2D_max11")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=772343808]
+y_sort_enabled = true
+limit_left = 0
+limit_top = 0
+limit_right = 4092
+limit_bottom = 4092
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=263726422]
+unique_name_in_owner = true
+position = Vector2(33, -37)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=609335374]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1453539835]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_hhyoi")
+debug_color = Color(0.87948143, 0.31202668, 0.35958618, 0.41960785)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=112705071]
+unique_name_in_owner = true
+offset_left = -42.0
+offset_top = -83.0
+offset_right = 35.0
+offset_bottom = -75.0
+theme_override_styles/background = SubResource("StyleBoxFlat_hhyoi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fgwuk")
+value = 100.0
+show_percentage = false
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

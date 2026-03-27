@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ck5c6qxpey56t"]
+
+[ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="1_u1rbb"]
+[ext_resource type="Texture2D" uid="uid://3yuuvncivuds" path="res://DeadTree.png" id="2_1issp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhec8"]
+radius = 24.020824
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1903561616]
+collision_layer = 4
+collision_mask = 3
+
+[node name="GroundShadow" type="Sprite2D" parent="." unique_id=2144213105]
+visible = false
+modulate = Color(0.3515884, 0.27863044, 0.21058032, 1)
+light_mask = 4
+visibility_layer = 11
+position = Vector2(2, -3)
+scale = Vector2(1.3580704, 0.5384615)
+texture = ExtResource("1_u1rbb")
+
+[node name="DeadTreeTrunk" type="Sprite2D" parent="." unique_id=1977084258]
+position = Vector2(3, -12)
+scale = Vector2(0.13555194, 0.13555194)
+texture = ExtResource("2_1issp")
+region_enabled = true
+region_rect = Rect2(0, 715.8666, 1024, 308.13342)
+
+[node name="DeadTreeLeaves" type="Sprite2D" parent="." unique_id=669991785]
+z_index = 1
+position = Vector2(3, -85)
+scale = Vector2(0.14648436, 0.14648436)
+texture = ExtResource("2_1issp")
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 718.7538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1376650099]
+position = Vector2(2, -10)
+shape = SubResource("CircleShape2D_bhec8")
