@@ -1,14 +1,14 @@
 # The-Last-Oak-V1.0
 This was me and my groups submission for my colleges game jam. It won in the best game design category.
 
-##Features
+## Features
 - Player movement
 - Enemies that chase the player
 - Collison detection
 - Powerups that boost certain stats temporarily
 - Score and health systems
 
-##Built With
+## Built With
 -Godot
 -GDScript
 
