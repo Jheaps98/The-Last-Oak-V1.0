@@ -9,12 +9,12 @@ This was me and my groups submission for my colleges game jam. It won in the bes
 - Score and health systems
 
 ## Built With
--Godot
--GDScript
+- Godot
+- GDScript
 
 ## What i learned
--Game logic and scripting
--Testing and debugging
--Building interactive systems
--Animations and using spritesheets
+- Game logic and scripting
+- Testing and debugging
+- Building interactive systems
+- Animations and using spritesheets
 
